@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  rabbitmq:
+    addresses: 192.168.200.82:5672
+    username: Pr0duc7_S3rvis3s
+    password: Pr0duct2019**
+    listener.simple.retry:
+      enabled: true
+      initial-interval: 5000
+      max-attempts: 10
+      max-interval: 30000
+      multiplier: 3.0
+  main.allow-bean-definition-overriding: true
+queue:
+  name: queue.name.poc
+  exchance: exchange.poc
+  routing-key: routing.key.poc
