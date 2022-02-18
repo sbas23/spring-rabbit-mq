@@ -3,9 +3,9 @@ server:
 
 spring:
   rabbitmq:
-    addresses: 192.168.200.82:5672
-    username: Pr0duc7_S3rvis3s
-    password: Pr0duct2019**
+    addresses: ${address}
+    username: ${user}
+    password: ${pass}
     listener.simple.retry:
       enabled: true
       initial-interval: 5000
